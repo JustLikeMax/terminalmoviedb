@@ -23,7 +23,5 @@ export default async function getFilm(title: string) {
         Poster: data.Poster,
     };
 
-    console.log({ film });
-
     return film;
 }

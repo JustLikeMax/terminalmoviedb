@@ -129,9 +129,9 @@ export default function Home() {
                 </div>
             </div>
             {isPopupOpen && (
-                <div className="fixed inset-0 bg-[#000]/50 flex items-center justify-center z-10 animate-fade-in">
+                <div className="fixed inset-0 bg-[#000]/75 flex items-center justify-center z-10 animate-fade-in">
                     {film && (
-                        <div className="bg-[#0f0] text-[#000] p-8 rounded-lg max-w-xl w-full outline border-[#6b6b6b] border-2 animate-fade-in">
+                        <div className="bg-[#000] text-[#0f0] p-8 rounded-lg max-w-xl w-full outline animate-fade-in">
                             <h2 className="text-2xl font-bold mb-4">
                                 {film.Title} ({film.Year})
                             </h2>
@@ -146,25 +146,25 @@ export default function Home() {
                                 />
                                 <div className="flex-1">
                                     <p>
-                                        <span className="font-bold">
+                                        <span className="font-bold text-lg">
                                             Veröffentlicht:
                                         </span>{" "}
                                         {film.Released}
                                     </p>
                                     <p>
-                                        <span className="font-bold">
+                                        <span className="font-bold text-lg">
                                             Laufzeit:
                                         </span>{" "}
                                         {film.Runtime}
                                     </p>
                                     <p>
-                                        <span className="font-bold">
+                                        <span className="font-bold text-lg">
                                             Genre:
                                         </span>{" "}
                                         {film.Genre}
                                     </p>
                                     <p>
-                                        <span className="font-bold">
+                                        <span className="font-bold text-lg">
                                             Handlung:
                                         </span>{" "}
                                         {film.Plot.length > 390
@@ -174,7 +174,7 @@ export default function Home() {
                                 </div>
                             </div>
                             <button
-                                className="mt-4 bg-[#000] text-[#0f0] px-4 py-2 rounded"
+                                className="mt-4 bg-[#0f0] text-[#000] px-4 py-2 rounded transition-transform hover:scale-105"
                                 onClick={() => setIsPopupOpen(false)}
                             >
                                 Schließen
@@ -184,8 +184,8 @@ export default function Home() {
                 </div>
             )}
             {selectedImage && (
-                <div className="fixed inset-0 bg-[#fff]/50 flex items-center justify-center z-20 animate-fade-in p-4">
-                    <div className="bg-[#000] text-[#0f0] p-8 rounded-lg max-w-[90vw] max-h-[90vh] overflow-auto">
+                <div className="fixed inset-0 bg-[#000]/85 flex items-center justify-center z-20 animate-fade-in p-4">
+                    <div className="bg-[#000] text-[#0f0] p-4 rounded-lg max-w-[90vw] max-h-[90vh] overflow-auto outline">
                         <Image
                             src={selectedImage}
                             alt="film image"
@@ -195,7 +195,7 @@ export default function Home() {
                             className="rounded-lg"
                         />
                         <button
-                            className="mt-4 bg-[#0f0] text-[#000] px-4 py-2 rounded"
+                            className="mt-4 bg-[#0f0] text-[#000] px-4 py-2 rounded transition-transform hover:scale-105"
                             onClick={closeImagePopup}
                         >
                             Schließen
