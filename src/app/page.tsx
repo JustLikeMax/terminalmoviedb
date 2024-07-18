@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import getFilm from "./api/getFilm";
 import { Button } from "@/components/ui/button";
 
+import Toast from "@/components/JustLikeMaxToast";
+
 interface Film {
     Title: string;
     Year: string;
@@ -19,6 +21,7 @@ interface Film {
 }
 
 export default function Home() {
+    const [isToastOpen, setIsToastOpen] = useState(true);
     const [input, setInput] = useState("");
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [film, setFilm] = useState(null as Film | null);
@@ -200,6 +203,7 @@ export default function Home() {
                     </div>
                 </div>
             )}
+            {isToastOpen && <Toast onClose={() => setIsToastOpen(false)} />}
         </div>
     );
 }
