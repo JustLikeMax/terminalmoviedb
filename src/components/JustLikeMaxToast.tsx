@@ -46,7 +46,7 @@ const Toast: React.FC<ToastProps> = ({ onClose }) => {
                         href="https://discord.com/users/1187384354108874822"
                         target="_blank"
                     >
-                        JustLikeMax
+                        Max
                     </a>
                 </p>
             </div>
