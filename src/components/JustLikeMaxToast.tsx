@@ -43,10 +43,10 @@ const Toast: React.FC<ToastProps> = ({ onClose }) => {
                 <p>
                     Made with <span className="text-red-500"> ❤ </span>by{" "}
                     <a
-                        href="https://discord.com/users/1187384354108874822"
+                        href="https://github.com/JustLikeMax"
                         target="_blank"
                     >
-                        JustLikeMax
+                        Max
                     </a>
                 </p>
             </div>
